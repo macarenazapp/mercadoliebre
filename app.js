@@ -1,10 +1,10 @@
 const express = require('express'); // por convención se llama express
 const app= express() 
-console.log(app);
+
 
 
 const path = require('path');
-app.use('/static', express.static(path.join(__dirname, '/public')));
+app.use( express.static(path.join(__dirname, '/public')));
 app.listen(process.env.PORT || 3000, function() {console.log('Esto fue exitoso');}) 
 
 
