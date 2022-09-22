@@ -38,6 +38,19 @@ app.get('/register.css', (req,res)=>{
 }
 )
 
+app.get('/editar.css', (req,res)=>{
+    let htmlPath= path.resolve(__dirname, './public/editar.css')
+    res.sendFile(htmlPath)
+    
+}
+)
+
+app.get('/logoblanco.jpg', (req,res)=>{
+    let htmlPath= path.resolve(__dirname, './public/images/logo.jpg') 
+    res.sendFile(htmlPath)
+    
+}
+)
 
 app.get('/moulinex.jpg', (req,res)=>{
     let htmlPath= path.resolve(__dirname, './public/images/img-cafetera-moulinex.jpg') 
@@ -45,6 +58,8 @@ app.get('/moulinex.jpg', (req,res)=>{
     
 }
 )
+
+
 
 app.get('/banner.jpg', (req,res)=>{
     let htmlPath= path.resolve(__dirname, './public/images/img-home-banner.jpg')  
@@ -90,6 +105,13 @@ app.get('/login', (req,res)=>{
 
 app.get('/register', (req,res)=>{
     let htmlPath= path.resolve(__dirname, './views/register.html')
+    res.sendFile(htmlPath)
+    
+}
+)
+
+app.get('/editar', (req,res)=>{
+    let htmlPath= path.resolve(__dirname, './views/editar.html')
     res.sendFile(htmlPath)
     
 }
